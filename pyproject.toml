@@ -1,0 +1,24 @@
+[project]
+name = "feed-app"
+version = "0.1.0"
+description = "This is the first version of it i used for learning advanced fastapi"
+readme = "README.md"
+authors = [
+    { name = "Doclaw-Tech-X4", email = "doclaw0@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.161.0",
+    "fastapi-users[sqlalchemy]>=15.0.5",
+    "imagekitio>=5.11.0",
+    "python-dotenv>=1.2.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+feed-app = "main:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
