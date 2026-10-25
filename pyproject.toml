@@ -11,14 +11,18 @@ dependencies = [
     "aiosqlite>=0.22.1",
     "fastapi>=0.161.0",
     "fastapi-users[sqlalchemy]>=15.0.5",
-    "imagekitio>=5.11.0",
+    "imagekitio>=4,<5",
     "python-dotenv>=1.2.4",
+    "streamlit>=1.66.1",
     "uvicorn[standard]>=0.54.0",
 ]
 
 [project.scripts]
 feed-app = "main:main"
 
-[build-system]
-requires = ["uv_build>=0.13.5,<0.14.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = false
+
+[tool.uv.build-backend]
+module-root = ""
+module-names = ["app", "main"]
